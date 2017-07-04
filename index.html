@@ -16,6 +16,7 @@
         font-weight: normal;
       }
     .section_background {background-color:#c2c444; color: #fff}
+    .subsection_background {background-color:#e87837; color: #fff}
     </style>
   </head>
   <body>
@@ -25,6 +26,8 @@ class: center, middle
 
 # Reproducible research
 ### from data collection to publication
+        
+https://github.com/stijnvanhoey/workshop_ywp17
 
 YWP workshop, 6 July 2017
 
@@ -32,11 +35,28 @@ Stijn Van Hoey
 
 <a href="https://twitter.com/svanhoey"><i class="fa fa-twitter" aria-hidden="true"></i> @SVanHoey</a>
 <a href="https://github.com/stijnvanhoey"><i class="fa fa-github" aria-hidden="true"></i> stijnvanhoey</a>
+  
 
+---
+class: center, middle
+        
+## Install https://desktop.github.com/
+
+![:scale 100%](./img/install_github_desktop.png)
+
+---
+class: center, middle
+
+<div class="alert alert-info">
+    <a href="https://hackmd.io/s/S1S8J0OE-" target="_blank">https://hackmd.io/s/S1S8J0OE-</a>
+</div>
+
+![:scale 100%](./img/InnoScholComm_figure_jan2015.png)
+        
 ---
 class: center, middle, section_background
 
-# Who are you?!?
+# Introduction
 
 ---
 class: left, middle
@@ -77,7 +97,7 @@ https://github.com/inbo
 class: center, middle
 
 ## Trying to do things 
-##`open` and `reproducible`
+## `reproducible` and `open`
 ### data, code, analysis, publications,...
 
 ---
@@ -109,7 +129,7 @@ count: false
 --
 count: false
 
-* ...running > 10 different modelling scenario's by `changing parameters/inputs manually`
+* ...running > 10 different modelling/experimental scenario's by `changing parameters/inputs manually`
 
 --
 count: false
@@ -128,9 +148,445 @@ count: false
 
 ---
 background-image: url(./img/philosoraptor-there-must-be-a-better-way.jpg)
+        
+---
+class: center, middle, section_background
+
+# Reproducibility
+
+---
+class: center, middle
+background-image: url(./img/selfish_reproduce.png)        
+
+.footnote[Markowetz Genome Biology (2015) 16:274 <br> DOI 10.1186/s13059-015-0850-7]
+
+---
+class: center, middle
+background-image: url(./img/selfish_reproduce_alpha.png)
+        
+<div class="alert alert-success">
+    <h2>Do it for your future self, a couple of days/weeks/months from now...</h2>
+</div>
+        
+---
+class: center, middle
+background-image: url(./img/InnoScholComm_figure_jan2015.png)
+
+---
+class: center, middle
+count: false
+background-image: url(./img/InnoScholComm_figure_jan2015.png)
+        
+<div class="alert alert-warning">
+    <h2>Tools, tools, tools...</h2>
+</div>
+        
+---
+class: center, middle
+background-image: url(./img/best_practices_computational_science.png)
+
+<div class="alert alert-success">
+    <h2>best practices >>> tools</h2>
+</div>
+        
+.footnote[Wilson G, Aruliah DA, Brown CT, Chue Hong NP, Davis M, et al. (2014) <br>Best Practices for Scientific Computing. PLoS Biol 12(1): e1001745. doi:10.1371/journal.pbio.1001745]
+
+--
+count: false
+
+<div class="alert alert-success">
+    Yes, I do have favorite tooling... of course!
+</div>
+
+---
+class: center, middle
+background-image: url(./img/good_enough_practices_computational_science.png)
+
+.footnote[Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., Teal, T., Wilson, G. (2016). <br> Good Enough Practices for Scientific Computing, 1–30.]
+
+
+---
+class: left, middle
+
+<h3>1. Tidy your data</h3>
+<h3>2. Track your changes</h3>
+<h3>3. Organize your project</h3>
+        
+---
+class: center, middle, subsection_background
+        
+# Tidy your data
+
+---
+class: center, middle, subsection_background
+        
+# Track your changes
+
+---
+class: center, middle
+count: false
+        
+<i class="fa fa-git fa-5x" aria-hidden="true"></i>
+        
+---
+class: left, middle
+
+.emphasize[
+<i class="fa fa-quote-left fa-3x fa-pull-left" aria-hidden="true"></i>`Git` is an application that runs on your computer, like a web browser or a word processor
+]
+
+---
+class: left, middle
+
+# 1. `Git` lets you tell<br> the story of your<br> project
+
+---
+class: center, middle
+background-image: url(./img/phd_comics_notfinal.gif)     
+
+.footnote[Piled Higher and Deeper by Jorge Cham, <br> www.phdcomics.com]
+
+---
+class: center, middle
+
+![:scale 60%](./img/commit_file_chain.png)
+
+---
+class: left, middle
+
+.emphasize[You use Git to take snapshots of all<br> the files in a folder. This folder <br> is called a `repository` or `repo`.]
+
+---
+class: left, middle
+
+.emphasize[When you want to take a snapshot <br> of a file or files, you create a<br> `commit`]
+
+---
+class: center, middle
+        
+![:scale 100%](./img/commit_chain_0commit.png)
+
+---
+class: center, middle
+count: false
+
+![:scale 100%](./img/commit_chain_1commit.png)
+
+---
+class: center, middle
+count: false
+
+![:scale 100%](./img/commit_chain_2commit.png)
+
+---
+class: center, middle
+count: false
+
+![:scale 100%](./img/commit_chain_3commit.png)
+
+---
+class: center, middle
+count: false
+
+![:scale 100%](./img/commit_chain_4commit.png)        
+
+---
+class: center, middle
+count: false
+
+![:scale 100%](./img/commit_chain_5commit.png)         
+
+---
+class: left, middle
+
+.emphasize[When you `commit` a file or files,<br> some information is saved along<br> with the changes of the file]
+
+---
+class: left, middle
+
+.emphasize[
+* WHO
+* WHEN
+]
+
+---
+class: left, middle
+
+.emphasize[You can add more information about the changes you’ve made in a `commit message`]
 
 ---
 
+# A good commit message
+<br><br><br><br>
+
+.widthlimit[
+```
+Extend season handling
+
+Dependent of the use-case, the meteorological or astrological 
+handling of season start and end dates is required. This 
+commit provides support for both use cases as class property
+```
+]
+
+---
+class: center, middle
+background-image: url(./img/commit_1.png)
+
+---
+class: center, middle
+background-image: url(./img/commit_2.png)
+count: false
+
+---
+class: center, middle
+background-image: url(./img/commit_3.png)
+count: false
+
+---
+class: left, bottom
+background-image: url(./img/commit_history.png)
+        
+.emphasize[Once you saved some snapshots,<br>Git lets you move through them...]
+
+---
+class: left, middle
+
+# 2. `Git` helps you back<br> up your work
+
+---
+class: center, middle
+
+![:scale 100%](./img/current_backup.png)
+
+---
+class: left, middle
+
+.emphasize[Everyone knows that you should<br> `back up` your work regularly]
+
+---
+class: left, middle
+
+.emphasize[Ideally to somewhere that is<br> `geographically distinct`<br> from your computer]
+
+---
+class: left, middle
+
+.emphasize[
+* Safer
+* Access from different places
+* Shared access
+
+<br>
+<i class="fa fa-server fa-3x" aria-hidden="true"></i>
+<i class="fa fa-dropbox fa-3x" aria-hidden="true"></i>
+<i class="fa fa-cloud-upload fa-3x" aria-hidden="true"></i>
+...
+]
+
+---
+class: left, middle
+
+.emphasize[In Git this place is called a `remote`]
+
+---
+class: left, middle
+
+.center.emphasize[<i class="fa fa-github fa-5x" aria-hidden="true"></i><br>A very popular remote is `GitHub`]
+
+---
+class: left, middle
+
+.emphasize[To get some work from a remote<br> for the first time you `clone` it]
+
+---
+class: left, middle
+background-image: url(./img/git_remote_1.png)
+
+---
+class: left, middle
+background-image: url(./img/git_remote_2.png)  
+count: false
+
+---
+class: right, middle
+background-image: url(./img/git_remote_3.png)  
+count: false
+
+.emphasize[The repo is<br> available locally<br> and on<br> calculation<br> server]
+
+---
+class: right, middle
+background-image: url(./img/git_remote_4.png)  
+count: false
+
+.emphasize[I created<br> code locally]
+
+---
+class: right, middle
+background-image: url(./img/git_remote_5.png)  
+count: false
+
+.emphasize[I can `push`<br> my changes<br> to remote]
+
+---
+class: right, middle
+background-image: url(./img/git_remote_5b.png)  
+count: false
+
+.emphasize[The code on the<br> cluster does not<br> contain the<br> new feature]
+
+---
+class: right, middle
+background-image: url(./img/git_remote_6.png)       
+count: false
+
+<br><br><br><br>
+.emphasize[I can `pull`<br> my changes to<br> the calculation<br> cluster]
+
+
+---
+class: left, middle
+
+`repository`<br>
+.fadetext[`add`]<br>
+`commit`<br>
+.fadetext[`hash`]<br>
+.fadetext[`checkout`]<br>
+.fadetext[`branch`]<br>
+.fadetext[`merge`]<br>
+`remote`<br>
+`clone`<br>
+`pull`<br>
+`push`<br>
+
+---
+class: center, middle
+
+# Your turn...
+
+![](./img/youcandoit.gif)
+
+.left[
+* configure Git(Hub)
+* create you're first repo
+* clone locally
+* commit, push and pull...
+]
+
+---
+class: left, middle
+
+.emphasize[Git is great with `text` files]<br>
+*(.R, .py, .md, .tex,...)*
+
+--
+
+<br><br>
+.emphasize[Git is not suitable for...
+
+* Large files (100s of MBs - GBs)
+* Binary files]
+*(Pictures, Videos, Music, Office Documents, output binaries)*
+
+<br><br>
+.emphasize[...for the moment, remember `.gitignore`]
+   
+---
+class: right, top
+background-image: url(./img/git_intro.png) 
+        
+## Version control...
+
+.emphasize[
+Tell the story of your project <i class="fa fa-git" aria-hidden="true"></i><br>
+Travel back in time <i class="fa fa-git" aria-hidden="true"></i><br>
+Experiment with changes <i class="fa fa-git" aria-hidden="true"></i><br>
+Backup your work <i class="fa fa-git" aria-hidden="true"></i> <i class="fa fa-github" aria-hidden="true"></i><br>
+Collaborate on projects <i class="fa fa-git" aria-hidden="true"></i> <i class="fa fa-github" aria-hidden="true"></i>]
+        
+---
+class: right, top
+background-image: url(./img/git_intro.png) 
+        
+## Version control...
+
+.emphasize[
+**Tell the story of your project** <i class="fa fa-git" aria-hidden="true"></i><br>
+Travel back in time <i class="fa fa-git" aria-hidden="true"></i><br>
+Experiment with changes <i class="fa fa-git" aria-hidden="true"></i><br>
+**Backup your work** <i class="fa fa-git" aria-hidden="true"></i> <i class="fa fa-github" aria-hidden="true"></i><br>
+Collaborate on projects <i class="fa fa-git" aria-hidden="true"></i> <i class="fa fa-github" aria-hidden="true"></i>]
+
+---
+
+# Manual versioning?
+
+.footnote[Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., Teal, T., Wilson, G. (2016). <br> Good Enough Practices for Scientific Computing, 1–30.]
+
+--
+count: false
+   
+* Mirror project folder off the researcher’s working machine by a remote system (e.g. Dropbox), `synchronize` daily
+
+--
+count: false
+
+* Add a file called `CHANGELOG.txt` to the project folder
+        
+```
+## 2017-05-08
+        
+* Add support for both meteorological or astrological handling of season start and end dates
+* Adapt plot date label handling
+        
+## 2017-04-22
+
+* Moved horizon plot function to separate file
+```
+
+--
+count: false
+
+* `Copy the entire project` whenever a significant change has been made -> *Data is Cheap, Time is Expensive!*
+
+
+
+
+---
+class: center, middle, subsection_background
+        
+# Organize your project
+
+        
+
+
+
+---
+class: center, middle, section_background
+
+# Open science?!?   
+        
+---
+class: center, middle
+background-image: url(./img/open_science_taxonomy.png)
+
+---
+class: center, middle        
+background-image: url(./img/open_science_just_science.png)
+
+<div>
+    <code>Open science describes the practice of carrying out scientific research in a completely transparent manner, and making the results of that research available to everyone. Isn’t that just `science`?</code>
+</div>
+
+---
+class: left, middle
+
+![:scale 100%](./img/workflow_example_1.png)
+
+        
+---
+For (your last) paper/conference paper/phd/... sketch the flow of data you're working with (which data, where and how stored, software used for manipulation)
 
 
 
