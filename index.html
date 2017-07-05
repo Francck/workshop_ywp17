@@ -216,8 +216,9 @@ background-image: url(./img/good_enough_practices_computational_science.png)
 class: left, middle
 
 <h3>1. Tidy your data</h3>
-<h3>2. Track your changes</h3>
-<h3>3. Organize your project</h3>
+<h3>1. Script your processing</h3>
+<h3>3. Track your changes</h3>
+<h3>4. Organize your project</h3>
         
 ---
 class: center, middle, subsection_background
@@ -227,7 +228,19 @@ class: center, middle, subsection_background
 ---
 class: left, middle
 .emphasize[Data `organization` is the foundation<br> of your research project]
-        
+
+---
+class: center, middle
+
+.emphasize.left[
+<i class="fa fa-quote-left fa-3x fa-pull-left" aria-hidden="true"></i>Data that is easy to model,<br> visualise and aggregate
+]
+<br><br><br><br>
+
+.emphasize.right[
+<i class="fa fa-quote-left fa-3x fa-pull-right" aria-hidden="true"></i>Create the data you wish<br> to see in the world
+]  
+
 ---
 class: center, middle
 background-image: url(./img/tidy-data_paper.png)
@@ -330,6 +343,18 @@ class: left, middle
 </div>
 
 ---
+class: center, middle, subsection_background
+        
+# Script your processing
+
+---
+class: center, middle
+
+.emphasize.left[
+<i class="fa fa-quote-left fa-3x fa-pull-left" aria-hidden="true"></i>`if` you `script` it,<br> make it worthwhile
+]
+
+---
 class: left, middle
 
 .emphasize.center[Scripting your data cleaning...]
@@ -366,14 +391,40 @@ class: center, middle
 <a href="./src/tidy_introduction_example.ipynb" target="_blank">Scripting with tidy data showcase</a>
 
 ---
-class: center, middle
+class: left, middle
 
+# Exercise preps
 
+<div class="alert alert-alert">
+    <ul>
+        <li>Go to https://athena.ugent.be</li>
+        <li>login using your given username/pwd combination</li>
+        <li>Start a Jupyter Notebook session...</li>
+        <li>Upload you're cleaned data set (or copy paste it into a new text-file)</li>
+        <li>Get used to the Jupyter Notbook (add cell, run cell)</li>
+    </ul>
+</div>
+
+---
+class: left, middle
+
+# Exercise
+
+<div class="alert alert-info">
+    <ul>
+        <li>Start with <code>import pandas as pd</code></li>
+        <li>Read in the data using the <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html" target="_blank"><code>read_csv</code></a> procedure</li>
+        <li>Calculate the mean weight for each of the sexes</li>
+        <li>Calculate the maximum weight for each of the study plots</li>
+        <li>Check the <a href="https://pandas.pydata.org/pandas-docs/stable/visualization.html#bar-plots" target="_blank">bar plot documentation</a> and make a bar chart</li>
+        
+    </ul>
+</div>
 
 ---
 class: center, middle
 
-# Literate programming?!?
+# Jupyter notebook?!?
 
 ![:scale 30%](http://blog.jupyter.org/content/images/2015/02/jupyter-sq-text.png)
 ![:scale 30%](http://3.bp.blogspot.com/-z3gtVOQ8sr4/UOwWB7hlA_I/AAAAAAAAAQE/0a5_c4oKvN4/s1600/RStudio_markdown.png)
@@ -387,26 +438,47 @@ check
 <a href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks" target="_blank">this</a> and <a href="http://rmarkdown.rstudio.com/gallery.html" target="_blank">this</a> out!
 
 ---
+class: left, middle
 
-Should I learn to make scripts?
-
-Short answer: YES!
-
-- learn w
-        
----
-
-
--> showcases coding
-    -> loop over files to do 'something' with data (requires function)
-    -> timeseries based analysis
-    -> spread-diagram as a model-example of reusable function
-    -> EX: change the names names of a set of files
--> structuur
-
+## Some showcases:
+* loop over files to do 'something' with data (requires function)
+* timeseries based analysis
+* spread-diagram as a model-example of reusable function
+* change the names names of a set of files
 
 ---
+class: left, middle
 
+.emphasize.center[Scripting...]
+<div class="alert alert-warning">
+<h3>Remember: </h3>
+    <ul>
+        <li>Think modular, think in small <code>functions</code></li>
+        <li>Progress step by step, <code>one function at a time</code></li>
+        <li>Use <code>meaningful names</code> for variables/functions (<code>TAB</code>!)</li>
+        <li>Documentation, <code>Documentation</code>, documentation,...!</li>
+        <li>Do <code>NOT</code> comment and uncomment sections of code to control a script</li>
+    </ul>
+</div>
+
+---
+class: left, middle
+
+.emphasize.center[How to get it on...?!?]
+<div class="alert alert-warning">
+    <ul>
+        <li>Pick an open source, high level language such as R and Python and focus on the data-science packages to actually get things done</li>
+        <ul>
+            <li>When R, check the <a href="http://tidyverse.org/" target="_blank">tidyverse</a> package</li>
+            <li>When Python, check the <a href="http://pandas.pydata.org/" target="_blank">Pandas</a> package</li>
+        </ul>
+        <li>Pick a proper environment to code (NOT notepad)</li>
+        <ul>
+            <li>When R, use Rstudio</li>
+            <li>When Python, use Spyder or Eclipse+pydev</li>
+        </ul>
+    </ul>
+</div>
 
 ---
 class: center, middle, subsection_background
@@ -654,7 +726,7 @@ class: left, middle
 ---
 class: center, middle
 
-# Your turn...
+# Exercise
 
 ![](./img/youcandoit.gif)
 
@@ -749,7 +821,26 @@ class: center, middle, subsection_background
         
 # Organize your project
 
-        
+---
+
+```
+|-- CITATION 
+|-- README 
+|-- LICENSE 
+|-- data 
+|  -- birds_count_table.csv 
+|-- doc 
+| -- notebook.md 
+| -- manuscript.md 
+|-- results 
+| -- summarized_results.csv 
+|-- src 
+| -- sightings_analysis.py 
+| -- runall.py
+```
+
+---
+
 
 
 
@@ -779,6 +870,11 @@ class: left, middle
 ---
 For (your last) paper/conference paper/phd/... sketch the flow of data you're working with (which data, where and how stored, software used for manipulation)
 
+---
+Everything you do is research output
+        
+* Submit data to a reputable DOI-issuing repository so that others can access and cite it. (1f) Your data is as much a product of your research as the papers you write, and just as likely to be useful to others (if not more so). Sites such as Figshare6, Dryad7, and Zenodo8 allow others to find your work, use it, and cite it
+        
 ---
 MY ADVICE:
         
