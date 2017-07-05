@@ -17,6 +17,7 @@
       }
     .section_background {background-color:#c2c444; color: #fff}
     .subsection_background {background-color:#e87837; color: #fff}
+    .exercise_background {background-color:#ececec; color: #000}
     </style>
   </head>
   <body>
@@ -199,24 +200,24 @@ background-image: url(./img/best_practices_computational_science.png)
         
 .footnote[Wilson G, Aruliah DA, Brown CT, Chue Hong NP, Davis M, et al. (2014) <br>Best Practices for Scientific Computing. PLoS Biol 12(1): e1001745. doi:10.1371/journal.pbio.1001745]
 
---
-count: false
-
-<div class="alert alert-success">
-    Yes, I do have favorite tooling... of course!
-</div>
-
 ---
 class: center, middle
 background-image: url(./img/good_enough_practices_computational_science.png)
 
 .footnote[Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., Teal, T., Wilson, G. (2016). <br> Good Enough Practices for Scientific Computing, 1–30.]
 
+--
+count: false
+
+<div class="alert alert-success">
+    <h3>This afternoon,<br> we'll cover some<br> fundamentals</h3>
+</div>
+
 ---
-class: left, middle
+class: left, middle, subsection_background
 
 <h3>1. Tidy your data</h3>
-<h3>1. Script your processing</h3>
+<h3>2. Script your data processing</h3>
 <h3>3. Track your changes</h3>
 <h3>4. Organize your project</h3>
         
@@ -397,11 +398,12 @@ class: left, middle
 
 <div class="alert alert-alert">
     <ul>
-        <li>Go to https://athena.ugent.be</li>
+        <li>Go to <a href="https://athena.ugent.be" target="_blank">athena.ugent.be</a></li>
         <li>login using your given username/pwd combination</li>
         <li>Start a Jupyter Notebook session...</li>
-        <li>Upload you're cleaned data set (or copy paste it into a new text-file)</li>
-        <li>Get used to the Jupyter Notbook (add cell, run cell)</li>
+        <li>Upload your cleaned survey data set (or copy paste it into a text-file)</li>
+        <li>Get <a href="https://github.com/jorisvandenbossche/DS-python-data-analysis/blob/master/_solved/python_recap/00-jupyter_introduction.ipynb" target="_blank">used to the Jupyter Notbook</a> (add cell, run cell)</li>
+        
     </ul>
 </div>
 
@@ -417,6 +419,7 @@ class: left, middle
         <li>Calculate the mean weight for each of the sexes</li>
         <li>Calculate the maximum weight for each of the study plots</li>
         <li>Check the <a href="https://pandas.pydata.org/pandas-docs/stable/visualization.html#bar-plots" target="_blank">bar plot documentation</a> and make a bar chart</li>
+        <li>Save the values used for the bar plot in a separate file <code>result_sex_weight_barplot.csv</code> (function <code>to_csv</code>)</li>
         
     </ul>
 </div>
@@ -456,26 +459,30 @@ class: left, middle
         <li>Think modular, think in small <code>functions</code></li>
         <li>Progress step by step, <code>one function at a time</code></li>
         <li>Use <code>meaningful names</code> for variables/functions (<code>TAB</code>!)</li>
-        <li>Documentation, <code>Documentation</code>, documentation,...!</li>
+        <li>Documentation, <code>documentation</code>, documentation,...!</li>
         <li>Do <code>NOT</code> comment and uncomment sections of code to control a script</li>
+        <li>Always use <code>relative path-names</code> to files!</li>
+        <li>It is generally a good idea to <code>save the aggregated plot data</code> directly linked to individual plots</li>
     </ul>
 </div>
 
 ---
 class: left, middle
 
-.emphasize.center[How to get it on...?!?]
+.emphasize.center[How to get this rollin'...?!?]
 <div class="alert alert-warning">
     <ul>
-        <li>Pick an open source, high level language such as R and Python and focus on the data-science packages to actually get things done</li>
+        <li>Pick an open source, high level language such as R/Python/..., focus on data-science packages</li>
         <ul>
-            <li>When R, check the <a href="http://tidyverse.org/" target="_blank">tidyverse</a> package</li>
-            <li>When Python, check the <a href="http://pandas.pydata.org/" target="_blank">Pandas</a> package</li>
+            <li>When R, check the <a href="http://tidyverse.org/" target="_blank">tidyverse</a> packages</li>
+            <li>When Python, check the <a href="http://pandas.pydata.org/" target="_blank">Pandas</a> package and the <a href="http://www.scipy-lectures.org/index.html" target="_blank">Scientific lecture notes</a>
+            
+            </li>
         </ul>
         <li>Pick a proper environment to code (NOT notepad)</li>
         <ul>
-            <li>When R, use Rstudio</li>
-            <li>When Python, use Spyder or Eclipse+pydev</li>
+            <li>When R, use <a href="https://www.rstudio.com/" target="_blank">Rstudio</a></li>  
+            <li>When Python, use <a href="https://www.continuum.io/downloads" target="_blank">Anaconda (Jupyter notebook, Spyder,...)</a> or <a href="http://www.pydev.org/" target="_blank">Eclipse+pydev</a></li>
         </ul>
     </ul>
 </div>
@@ -724,18 +731,168 @@ class: left, middle
 `push`<br>
 
 ---
-class: center, middle
+class: left, middle
 
 # Exercise
 
-![](./img/youcandoit.gif)
+<div class="alert alert-info">
+    <ol>
+        <li>configure Git(Hub)</li>
+        <li>create your first repo</li>
+        <li>clone locally</li>
+        <li>commit, push and pull...</li>
+    </ol>
+</div>
 
-.left[
-* configure Git(Hub)
-* create you're first repo
-* clone locally
-* commit, push and pull...
-]
+Work on your own, covering the next slides with a grey background.
+
+---
+class: left, middle, exercise_background
+
+### Create a repo
+
+1. Go to [GitHub](https://github.com) and login
+2. Follow [this tutorial](https://help.github.com/articles/create-a-repo/) to create a repo
+
+---
+class: center, middle, exercise_background
+
+![:scale 100%](./img/github_create_repo.png)
+
+---
+class: center, middle, exercise_background
+
+![:scale 100%](./img/github_created_repo.png)
+
+---
+class: left, middle, exercise_background
+
+### Configure git
+
+Provide the required information on<br> first startup of Github Desktop and<br>
+use [this tutorial](https://help.github.com/desktop/guides/getting-started/configuring-git-for-github-desktop/#platform-windows) to check your git configuration
+
+---
+class: center, middle, exercise_background
+
+![:scale 100%](./img/github-desktop-login.png)
+
+---
+class: center, middle, exercise_background
+
+![:scale 100%](./img/github-desktop-login-id.png)
+
+---
+class: left, middle, exercise_background
+
+### Clone a repo to work locally
+
+Follow [this tutorial](https://help.github.com/desktop/guides/contributing/cloning-a-repository-from-github-to-github-desktop/) to clone your repo
+
+---
+class: center, middle, exercise_background
+
+![:scale 100%](./img/ywp_cloning_repo.png)
+
+---
+class: left, middle, exercise_background
+
+### Make a commit
+
+1. Open your favourite text editor
+2. Update the `README.md`
+3. Commit your changes
+
+---
+class: center, middle, exercise_background
+
+![:scale 100%](./img/ywp_edit_readme.png)
+
+---
+class: center, middle, exercise_background
+
+![:scale 100%](./img/ywp_commit_edits_readme.png)
+
+---
+class: left, middle, exercise_background
+
+### Push your changes to backup your work
+
+`Push` to origin
+
+---
+class: center, middle, exercise_background
+
+![:scale 100%](./img/github_check_commit_online.png)
+        
+---
+class: left, middle, exercise_background
+
+### Add your data file to the repository
+
+1. Copy the file to the repository, in a subfolder `data`
+2. `Add`/`commit` the file to the repo
+3. `push` to origin
+4. Check the file online
+
+---
+class: center, middle, exercise_background
+
+![:scale 100%](./img/github_check_add_file.png)
+
+---
+class: center, middle, exercise_background
+
+### Intermezzo:
+### search in `csv`/`tsv` files on Github
+
+![:scale 100%](./img/github_support_search_files.png)
+        
+---
+class: left, middle, exercise_background
+
+### Add your notebook with the data analysis to the repository
+
+1. Copy the notebook to the repository, in a subfolder `src`
+2. `Add`/`commit` the file to the repo
+3. `push` to origin
+4. Check the file online
+
+---
+class: center, middle, exercise_background
+
+![:scale 100%](./img/github_check_add_notebook.png)
+
+---
+class: left, middle, exercise_background
+
+### Add your data file linked to resulting bar chart to the repository
+
+1. Copy the plot data file `result_sex_weight_barplot.csv` to the repository, in the subfolder `data`
+2. `Add`/`commit` the file to the repo
+3. `push` to origin
+4. Check the file online
+
+---
+class: center, middle, exercise_background
+
+![:scale 100%](./img/github_check_add_fbarchartfile.png)
+
+---
+class: center, middle
+
+![:scale 20%](./img/well_done.png)
+
+.emhasize[You have created a<br> `reproducible analysis`!]
+
+---
+class: left, middle, exercise_background
+
+### Fast worker?
+
+1. Check [the Github workflow](https://guides.github.com/introduction/flow/)
+2. Learn to create a `branch` [here](https://services.github.com/on-demand/github-desktop/create-branches-github-desktop), make a commit and create a `pull request` as explained [here](https://services.github.com/on-demand/github-desktop/pull-request-github-desktop)
+2. Learn how to write [Markdown](https://guides.github.com/features/mastering-markdown/), to make clean readme-files. Test it on your new repository.
 
 ---
 class: left, middle
@@ -813,8 +970,19 @@ count: false
 
 * `Copy the entire project` whenever a significant change has been made -> *Data is Cheap, Time is Expensive!*
 
+---
+class: left, middle
 
-
+.emphasize.center[Tracking your changes...]
+<div class="alert alert-warning">
+<h3>Remember: </h3>
+    <ul>
+        <li><code>Back up</code> (almost) everything created by a human being as soon as it is created</li>
+        <li>Keep changes <code>small</code> (i.e. <code>commit</code> often)</li>
+        <li>Manual versioning requires a LOT of <code>self-discipline</code>, Git automate some steps while enforcing others, requiring less self-discipline...</li>
+        <li>Git will be <code>PART OF</code> your backup-strategy</li>
+    </ul>
+</div>
 
 ---
 class: center, middle, subsection_background
@@ -822,6 +990,56 @@ class: center, middle, subsection_background
 # Organize your project
 
 ---
+class: center, middle
+
+![:scale 100%](./img/project_structure.png)
+
+---
+class: left, middle
+
+```
+|-- data 
+|   -- survey_data.csv 
+|   -- result_sex_weight_barplot.csv
+|-- src
+|   -- solution_exercise_survey_data.ipynb 
+|-- README 
+|-- LICENSE 
+|-- .gitignore 
+```
+
+--
+
+<div class="alert alert-info">
+<h3>Question</h3>
+What could be potential issues in this project structure?
+</div>
+
+---
+class: left, middle
+
+```
+|-- README 
+|-- LICENSE 
+|-- .gitignore 
+|-- data 
+|  -- raw
+|    -- birds_count_table.csv 
+|  -- processed
+|    -- result_sex_weight_barplot.csv
+|-- report
+|  -- notebook.ipynb 
+|  -- manuscript.md
+|  -- fig
+|    -- barchart_sexweight.png
+|-- src 
+|  -- sightings_analysis.py 
+|  -- runall.py
+```
+.footnote[see also https://drivendata.github.io/cookiecutter-data-science/#directory-structure]
+
+---
+class: left, middle
 
 ```
 |-- CITATION 
@@ -830,17 +1048,37 @@ class: center, middle, subsection_background
 |-- data 
 |  -- birds_count_table.csv 
 |-- doc 
-| -- notebook.md 
-| -- manuscript.md 
+|  -- notebook.ipynb 
+|  -- manuscript.md 
 |-- results 
-| -- summarized_results.csv 
+|  -- summarized_results.csv 
 |-- src 
-| -- sightings_analysis.py 
-| -- runall.py
+|  -- sightings_analysis.py 
+|  -- runall.py
 ```
 
----
+.footnote[Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., Teal, T., Wilson, G. (2016). <br> Good Enough Practices for Scientific Computing, 1–30.]
 
+---
+class: left, middle
+
+.emphasize.left[
+<i class="fa fa-quote-left fa-3x fa-pull-left" aria-hidden="true"></i>project folder `organization` is personal flavour,<br> but worthwhile to think about
+]
+
+---
+class: left, middle
+
+.emphasize.center[Project organisation...]
+<div class="alert alert-warning">
+<h3>Remember: </h3>
+    <ul>
+        <li>Put each project in its <code>own directory</code>, which is named after the project.</li>
+        <li>Decide about given sub-folder structure to get similarity in between projects, i.e. <code>data</code>, <code>src</code>, <code>doc</code></li>
+        <li>Name all files to <code>reflect their content</code> or function</li>
+        <li>Always use <code>relative file path</code> names</li>
+    </ul>
+</div>
 
 
 
@@ -874,7 +1112,11 @@ For (your last) paper/conference paper/phd/... sketch the flow of data you're wo
 Everything you do is research output
         
 * Submit data to a reputable DOI-issuing repository so that others can access and cite it. (1f) Your data is as much a product of your research as the papers you write, and just as likely to be useful to others (if not more so). Sites such as Figshare6, Dryad7, and Zenodo8 allow others to find your work, use it, and cite it
-        
+      
+
+https://guides.github.com/activities/citable-code/
+
+
 ---
 MY ADVICE:
         
