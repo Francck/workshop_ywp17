@@ -1,0 +1,9 @@
+WWTP,Treatment,pH
+Destelbergen,A,8.
+Landegem,A,7.5
+Dendermonde,A,8.3
+Eeklo,A,6.5
+Destelbergen,B,6.3
+Landegem,B,5.2
+Dendermonde,B,6.2
+Eeklo,B,7.2
