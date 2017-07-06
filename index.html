@@ -891,8 +891,9 @@ class: left, middle, exercise_background
 ### Fast worker?
 
 1. Check [the Github workflow](https://guides.github.com/introduction/flow/)
-2. Learn to create a `branch` [here](https://services.github.com/on-demand/github-desktop/create-branches-github-desktop), make a commit and create a `pull request` as explained [here](https://services.github.com/on-demand/github-desktop/pull-request-github-desktop)
-2. Learn how to write [Markdown](https://guides.github.com/features/mastering-markdown/), to make clean readme-files. Test it on your new repository.
+1. Learn to create a `branch` [here](https://services.github.com/on-demand/github-desktop/create-branches-github-desktop), make a commit and create a `pull request` as explained [here](https://services.github.com/on-demand/github-desktop/pull-request-github-desktop)
+1. Learn how to write [Markdown](https://guides.github.com/features/mastering-markdown/), to make clean readme-files. Test it on your new repository.
+1. Check how you could use [Issues](https://guides.github.com/features/issues/) to keep an overview of outstanding tasks/problems/...
 
 ---
 class: left, middle
@@ -1079,63 +1080,86 @@ class: left, middle
         <li>Always use <code>relative file path</code> names</li>
     </ul>
 </div>
-
-
-
----
-class: center, middle, section_background
-
-# Open science?!?   
         
----
-class: center, middle
-background-image: url(./img/open_science_taxonomy.png)
-
----
-class: center, middle        
-background-image: url(./img/open_science_just_science.png)
-
-<div>
-    <code>Open science describes the practice of carrying out scientific research in a completely transparent manner, and making the results of that research available to everyone. Isn’t that just `science`?</code>
-</div>
+.footnote[more on filenaming: https://github.com/cengel/data-management/blob/master/datamanagement.Rmd#file-naming]
 
 ---
 class: left, middle
 
+<div class="alert alert-info">
+<h3>Task: </h3>
+For (your last) paper/conference paper/phd/... sketch (e.g. flowchart) the flow of data you are working with (which data, where and how stored, software used for manipulation)... Is the entire pipeline traceable?
+</div>
+
+--
+
+As an example:
 ![:scale 100%](./img/workflow_example_1.png)
 
+---
+class: center, middle, section_background
+
+# Open science...
         
 ---
-For (your last) paper/conference paper/phd/... sketch the flow of data you're working with (which data, where and how stored, software used for manipulation)
+class: center, top
+background-image: url(./img/open_science_taxonomy.png)
 
 ---
-Everything you do is research output
-        
-* Submit data to a reputable DOI-issuing repository so that others can access and cite it. (1f) Your data is as much a product of your research as the papers you write, and just as likely to be useful to others (if not more so). Sites such as Figshare6, Dryad7, and Zenodo8 allow others to find your work, use it, and cite it
-      
+class: left, middle       
+background-image: url(./img/open_science_just_science.png)
 
-https://guides.github.com/activities/citable-code/
+---
+class: left, middle
+
+.emphasize.left[
+<i class="fa fa-quote-left fa-3x fa-pull-left" aria-hidden="true"></i>Everything (not just the paper) you do is a `research output`. Make it `citable`...
+]
+
+---
+class: left, middle
+
+<br>
+Submit `data` and `code` to a reputable  [DOI](https://nl.wikipedia.org/wiki/Digital_object_identifier)-issuing repository so that others can access and cite it. 
+Sites such as  [Figshare](https://figshare.com/), [Dryad](http://datadryad.org/), and [Zenodo](https://zenodo.org/) allow others to find your work, use it, and cite it.
+
+--
+
+<br>
+A self-containing Github repository is one of the most straight-forward options and can be directly [linked to Zenodo](https://guides.github.com/activities/citable-code/).
+        
+--
+
+<br>
+When publishing your data, aim for [>= 3 stars](http://5stardata.info/en/).
+
 
 
 ---
-MY ADVICE:
-        
-* learn to write scripts (Python/R/...)
-    * use a supportive coding environment (IDE), e.g. Rstudio (R), Spyder (Python)
-    * remember TAB and ?
+class: left, middle
 
-* use version control (git)
+FINAL ADVICE:
+        
+* learn to write `scripts` (Python/R/...)
+    * use a supportive coding environment, e.g. Rstudio (R), Spyder (Python) or Jupyter notebooks
+    * remember `TAB`, `?` and stackoverflow
+
+* use `version control` (Git):
     * With Github Desktop, Rstudio, cmd,... 
 
-* be hard to yourself: 
-    * project file structure 
+* `be hard to yourself`:
+    * clean project file structure 
     * tidy data organisation
 
 ---
+class: left, middle
 
-INFO
-    * PROVIDE DS course on Python!!
-    * http://www.datacarpentry.org/python-ecology-lesson/
+## More?
+
+* [Data carpentry](http://www.datacarpentry.org/lessons/) and [Software carpentry](https://software-carpentry.org/lessons/) courses
+* Doctoral schools Ugent [data manipulation course](https://github.com/jorisvandenbossche/DS-python-data-analysis)
+* ROpensci [reproducibility guide](http://ropensci.github.io/reproducibility-guide/)
+* Many resources [enlisted](https://github.com/ecoinfAEET/Reproducibilidad/blob/master/Recursos.Rmd)...
 
 
 
